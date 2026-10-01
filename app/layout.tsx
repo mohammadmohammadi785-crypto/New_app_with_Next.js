@@ -1,5 +1,4 @@
 import "./globals.css";
-// import "../fontawesome-free-5.15.4-web/css/all.min.css";
 import I18nProvider from "@/providers/I18nProvider";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";

@@ -40,4 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-fontawesome-free-5.15.4-web
+/fontawesome-free-5.15.4-web

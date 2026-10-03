@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
+import "@/fontawesome-free-5.15.4-web/css/all.min.css";
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";

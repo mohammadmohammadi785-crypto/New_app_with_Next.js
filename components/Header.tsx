@@ -70,34 +70,18 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 sm:hidden">
-          <button
-            onClick={() => changeLanguage(language == "en" ? "fa" : "en")}
-            className="p-2 text-normal"
-            aria-label="Change language"
-          >
-            fa
-          </button>
-          <button
-            onClick={toggleTheme}
-            className="p-2 text-normal"
-            aria-label="Toggle theme"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
-          </button>
+        <div className="flex items-center text-normal gap-2 sm:hidden">
+          <LangSwither />
+          <ThemeSwither />
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2"
+            className="p-2 text-normal"
             aria-label="Menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6 text-normal" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6 text-normal" />
             )}
           </button>
         </div>

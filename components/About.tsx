@@ -79,7 +79,7 @@ export default function About() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="flex-shrink-0"
+          className="shrink-0"
         >
           <img
             src="/profile2.jpg"

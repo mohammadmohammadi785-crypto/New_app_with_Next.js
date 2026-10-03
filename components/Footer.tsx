@@ -23,7 +23,7 @@ export default function Footer() {
     {
       name: `${t("SocialLinks.GitHub")}`,
       href: "https://github.com/mohammadmohammadi785-crypto",
-      icon: <i className="h-5 w-5 fab fa-github sm:h-6 sm:w-6 text-white"></i>,
+      icon: <i className="h-5 w-5 fab fa-github sm:h-6 sm:w-6"></i>,
     },
     {
       name: `${t("SocialLinks.Linkedin")}`,

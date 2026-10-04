@@ -14,7 +14,6 @@ import "@/i18n/config";
 import { Languages } from "lucide-react";
 
 export default function LangSwither() {
-  const { theme, resolvedTheme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);

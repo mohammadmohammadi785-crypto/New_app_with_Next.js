@@ -5,11 +5,9 @@ import { Mail, Send } from "lucide-react";
 import "@/fontawesome-free-5.15.4-web/css/all.min.css";
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import "@/i18n/config";
-
+import { useTranslations } from "next-intl";
 export default function Contact() {
-  const { t } = useTranslation();
+  const t = useTranslations("contact");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -38,13 +36,13 @@ export default function Contact() {
         { publicKey },
       )
       .then(() => {
-        alert(t("contact.success"));
+        alert(t("success"));
         setName("");
         setEmail("");
         setMessage("");
       })
       .catch((error) => {
-        alert(t("contact.failed") + error.text);
+        alert(t("failed") + error.text);
       });
   };
 
@@ -57,13 +55,13 @@ export default function Contact() {
       className="bg-white border-normal rounded-bl-none rounded-br-none dark:bg-black p-6 border-b sm:p-8 md:p-10 shadow-lg"
     >
       <h2 className="text-2xl sm:text-3xl text-normal md:text-4xl font-bold mb-6">
-        {t("contact.title")}
+        {t("title")}
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         <div className="space-y-4">
           <p className="flex items-center text-normal text-sm sm:text-base">
             <Mail className="mr-2 rtl:ml-2 rtl:mr-0 h-5 w-5" />
-            {t("contact.email")}: mohammadmohammadi2025@gmail.com
+            {t("email")}: mohammadmohammadi2025@gmail.com
           </p>
           <p className="text-sm text-normal sm:text-base md:text-lg flex items-center">
             <i className="mr-2 fab fa-linkedin rtl:ml-2 rtl:mr-0 h-5 w-5"></i>
@@ -100,7 +98,7 @@ export default function Contact() {
               htmlFor="name"
               className="block text-sm font-medium text-normal"
             >
-              {t("contact.name")}
+              {t("name")}
             </label>
             <input
               type="text"
@@ -116,7 +114,7 @@ export default function Contact() {
               htmlFor="email"
               className="block text-sm font-medium text-normal"
             >
-              {t("contact.emailField")}
+              {t("emailField")}
             </label>
             <input
               type="email"
@@ -132,7 +130,7 @@ export default function Contact() {
               htmlFor="message"
               className="block text-sm font-medium text-normal"
             >
-              {t("contact.message")}
+              {t("message")}
             </label>
             <textarea
               id="message"
@@ -149,8 +147,7 @@ export default function Contact() {
             type="submit"
             className="bg-normal text-white px-6 py-3 rounded-full flex items-center"
           >
-            <Send className="mr-2 rtl:ml-2 rtl:mr-0 h-5 w-5" />{" "}
-            {t("contact.send")}
+            <Send className="mr-2 rtl:ml-2 rtl:mr-0 h-5 w-5" /> {t("send")}
           </motion.button>
         </motion.form>
       </div>

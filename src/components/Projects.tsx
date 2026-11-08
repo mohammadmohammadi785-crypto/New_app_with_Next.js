@@ -1,21 +1,19 @@
 "use client";
-
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import "@/i18n/config";
+import { useTranslations } from "next-intl";
 
 export default function Projects() {
-  const { t } = useTranslation();
+  const t = useTranslations("projects");
   const projects = [
     {
-      title: t("projects.restaurantTitle"),
-      description: t("projects.restaurantDescription"),
+      title: t("restaurantTitle"),
+      description: t("restaurantDescription"),
       link: "https://github.com/mohammadmohammadi785-crypto",
       image: "/project1.png",
     },
     {
-      title: t("projects.portfolioTitle"),
-      description: t("projects.portfolioDescription"),
+      title: t("portfolioTitle"),
+      description: t("portfolioDescription"),
       link: "https://github.com/mohammadmohammadi785-crypto/My-Portfolio",
       image: "/project2.png",
     },
@@ -29,9 +27,7 @@ export default function Projects() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="bg-white dark:text-normal dark:bg-black p-6 border-b border-normal rounded-bl-none rounded-br-none sm:p-8 rounded-lg shadow-lg"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-        {t("projects.title")}
-      </h2>
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6">{t("title")}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <motion.div
@@ -57,7 +53,7 @@ export default function Projects() {
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline font-medium"
               >
-                {t("projects.view")}
+                {t("view")}
               </a>
             </div>
           </motion.div>

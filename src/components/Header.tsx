@@ -1,37 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sun, Moon, Menu, X, Languages } from "lucide-react";
-import { useTheme } from "next-themes";
-import { useTranslation } from "react-i18next";
-import "@/i18n/config";
+import { Menu, X } from "lucide-react";
+
 import ThemeSwither from "./ThemeSwither";
 import LangSwither from "./LangSwither";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
-  const { theme, resolvedTheme, setTheme } = useTheme();
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  const language = i18n.language.startsWith("fa") ? "fa" : "en";
-
-  useEffect(() => {
-    setMounted(true);
-    const saved = localStorage.getItem("language") as "en" | "fa" | null;
-  }, [i18n]);
-
-  const changeLanguage = async (lang: "en" | "fa") => {
-    await i18n.changeLanguage(lang);
-    localStorage.setItem("language", lang);
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
-    setIsMenuOpen(false);
-  };
-
-  const toggleTheme = () =>
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
 
   const navItems = [
     { href: "#home", label: t("nav.home") },
@@ -49,7 +28,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <h1 className="text-xl dancing-script gradient-bg sm:text-2xl md:text-3xl font-extrabold tracking-tight">
-          {t("title")}
+          {t("nav.title")}
         </h1>
 
         <div className="hidden sm:flex items-center gap-4">

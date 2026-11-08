@@ -2,11 +2,10 @@
 
 import { motion } from "framer-motion";
 import { User, Code, Globe } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import "@/i18n/config";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
-  const { t } = useTranslation();
+  const t = useTranslations("home");
   return (
     <motion.section
       id="home"
@@ -21,7 +20,7 @@ export default function Home() {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="text-3xl text-black dark:text-white sm:text-4xl md:text-5xl font-bold mb-4"
       >
-        {t("home.title")}
+        {t("title")}
       </motion.h2>
       <motion.p
         initial={{ y: 20, opacity: 0 }}
@@ -29,7 +28,7 @@ export default function Home() {
         transition={{ delay: 0.4, duration: 0.5 }}
         className="text-base w-full md:w-[70%] sm:text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300"
       >
-        {t("home.intro")}
+        {t("intro")}
       </motion.p>
       <motion.div
         initial={{ y: 20, opacity: 0 }}
@@ -42,14 +41,14 @@ export default function Home() {
           className="bg-normal rounded-sm text-white px-6 py-3 flex items-center justify-center"
         >
           <User className="mr-2 rtl:ml-2 rtl:mr-0 h-5 w-5" />
-          {t("home.learnMore")}
+          {t("learnMore")}
         </a>
         <a
           href="#projects"
           className="bg-normal text-white px-6 py-3 rounded-sm flex items-center justify-center"
         >
           <Code className="mr-2 rtl:ml-2 rtl:mr-0 h-5 w-5" />
-          {t("home.viewProjects")}
+          {t("viewProjects")}
         </a>
       </motion.div>
       <motion.div
@@ -59,16 +58,16 @@ export default function Home() {
         className="mt-12"
       >
         <h3 className="text-xl text-center text-normal sm:text-2xl font-semibold mb-4">
-          {t("home.expertise")}
+          {t("expertise")}
         </h3>
         <div className="flex flex-col items-center sm:flex-row justify-center gap-4 sm:gap-8">
           <div className="flex items-center">
             <Code className="h-8 w-8 text-normal mr-2 rtl:ml-2 rtl:mr-0" />
-            <span className="dark:text-normal">{t("home.frontend")}</span>
+            <span className="dark:text-normal">{t("frontend")}</span>
           </div>
           <div className="flex items-center">
             <Globe className="h-8 w-8 text-normal mr-2 rtl:ml-2 rtl:mr-0" />
-            <span className="dark:text-normal">{t("home.fullstack")}</span>
+            <span className="dark:text-normal">{t("fullstack")}</span>
           </div>
         </div>
       </motion.div>

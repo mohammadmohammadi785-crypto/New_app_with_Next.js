@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "خانه",
+    "about": "درباره من",
+    "projects": "پروژه‌ها",
+    "contact": "تماس با من",
+    "title": "محمد محمدی",
+    "theme": {
+      "system": "حالت سیستم",
+      "light": "حالت روشن",
+      "dark": "حالت تاریک"
+    },
+    "SocialLinks": {
+      "twitter": "تویتر",
+      "GitHub": "گیت هاب",
+      "Linkedin": "لینک دین"
+    },
+    "footer": {
+      "navigation": "ناوبری",
+      "follow": "دنبال کردن من",
+      "contactInfo": "اطلاعات تماس",
+      "email": "ایمیل",
+      "phone": "شماره تماس",
+      "rights": "تمامی حقوق محفوظ است.",
+      "built": "ساخته شده با Next.js، TypeScript و Tailwind CSS"
+    }
+  },
+
+  "home": {
+    "title": "به پورتفولیوی من خوش آمدید",
+    "intro": "سلام، من محمد محمدی هستم؛ یک توسعه‌دهنده وب اپلیکیشن که در تکنولوژی‌های مدرن وب مانند PHP, Laravel, JavaScript، Next.js، React.js، TypeScript و Tailwind CSS فعالیت می‌کنم. من برنامه‌های واکنش‌گرا و کاربرپسند می‌سازم که تأثیرگذار باشند.",
+    "learnMore": "بیشتر درباره من",
+    "viewProjects": "مشاهده پروژه‌های من",
+    "expertise": "تخصص‌های من",
+    "frontend": "توسعه فرانت‌اند",
+    "fullstack": "راهکارهای فول‌استک"
+  },
+  "about": {
+    "title": "درباره من",
+    "description": "من محمد محمدی هستم، یک توسعه‌دهنده وب متعهد با بیش از ۲ سال تجربه در ساخت برنامه‌های وب مقیاس‌پذیر و کاربرپسند. علاقه من ساخت تجربه‌های دیجیتال روان با تکنولوژی‌هایی مانند Laravel، React، Next، TypeScript، JavaScript، HTML، CSS، Tailwind CSS، GitHub و Redux است. از حل مشکلات پیچیده و ارائه راهکارهای باکیفیت که نیازهای کاربران را برآورده کنند لذت می‌برم.",
+    "skill": "مهارت‌های من",
+    "skills": {
+      "React": "ریکت",
+      "JavaScript": "جاوا اسکریپت",
+      "CSS": "سی ایس ایس",
+      "NextJS": "نیکست جی ایس",
+      "Laravel": "لاراویل",
+      "TypeScript": "تایپت اسکریپت",
+      "Html": "ایج تی ایم ایل",
+      "Tailwindcss": "تیل ویند سی ایس ایس",
+      "GitHub": "گیت هاب",
+      "Redux": "ریدکس"
+    }
+  },
+  "projects": {
+    "title": "پروژه‌ها",
+    "view": "مشاهده در GitHub",
+    "restaurantTitle": "رستوران آنلاین",
+    "restaurantDescription": "یک رستوران آنلاین کامل که با Next.js, TypeScript و Tailwind CSS ساخته شده است.",
+    "portfolioTitle": "وب‌سایت پورتفولیو",
+    "portfolioDescription": "یک پورتفولیوی شخصی برای نمایش کارها که با React و Tailwind CSS ساخته شده است."
+  },
+  "contact": {
+    "title": "تماس با من",
+    "email": "ایمیل",
+    "linkedin": "لینکدین",
+    "github": "گیت‌هاب",
+    "name": "نام",
+    "emailField": "ایمیل",
+    "message": "پیام",
+    "send": "ارسال پیام",
+    "success": "پیام با موفقیت ارسال شد!",
+    "failed": "ارسال پیام ناموفق بود: "
+  }
+}

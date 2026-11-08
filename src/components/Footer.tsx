@@ -2,22 +2,21 @@
 
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 // const socialLinks1 = [
 //   ["GitHub", <Github className="h-5 w-5 sm:h-6 sm:w-6" />],
 //   ["LinkedIn", <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />],
 //   ["twitter", <Twitter className="h-5 w-5 sm:h-6 sm:w-6" />],
 // ];
-import { useTranslation } from "react-i18next";
-import "@/i18n/config";
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const t = useTranslations("nav");
   const navLinks = [
-    { href: "#home", label: t("nav.home") },
-    { href: "#about", label: t("nav.about") },
-    { href: "#projects", label: t("nav.projects") },
-    { href: "#contact", label: t("nav.contact") },
+    { href: "#home", label: t("home") },
+    { href: "#about", label: t("about") },
+    { href: "#projects", label: t("projects") },
+    { href: "#contact", label: t("contact") },
   ];
   const socialLinks = [
     {

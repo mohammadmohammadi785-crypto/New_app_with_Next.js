@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import Github from "@/public/icons/github.svg";
-import { useTranslation } from "react-i18next";
-import "@/i18n/config";
+import { useTranslations } from "next-intl";
 
 // const skills = [
 //   {
@@ -49,7 +48,7 @@ import "@/i18n/config";
 // ];
 
 export default function About() {
-  const { t } = useTranslation();
+  const t = useTranslations("about");
   const skills = [
     [`${t("skills.React")}`, "/react1.svg"],
     [`${t("skills.TypeScript")}`, "/typescript.svg"],
@@ -72,7 +71,7 @@ export default function About() {
       className="bg-white text-normal border-normal rounded-bl-none rounded-br-none dark:bg-black border-b p-6 sm:p-8 md:p-10 rounded-lg shadow-lg"
     >
       <h2 className="text-2xl text-normal sm:text-3xl md:text-4xl font-bold mb-6">
-        {t("about.title")}
+        {t("title")}
       </h2>
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
         <motion.div
@@ -94,7 +93,7 @@ export default function About() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-base md:text-lg mb-6 text-gray-600 dark:text-gray-300"
           >
-            {t("about.description")}
+            {t("description")}
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -102,7 +101,7 @@ export default function About() {
             transition={{ delay: 0.6, duration: 0.5 }}
           >
             <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
-              {t("about.skills")}
+              {t("skill")}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {skills.map(([name, icon], index) => (

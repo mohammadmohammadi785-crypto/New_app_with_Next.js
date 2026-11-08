@@ -1,0 +1,37 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { cn } from "@/src/lib/utils";
+import { ThemeProvider } from "next-themes";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
+
+export const metadata: Metadata = {
+  title: "Mohmmad Mohammadi | Portfolio",
+  description: "Mohammad Mohammadi",
+};
+
+export const instant = false;
+
+export default async function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
+  return (
+    <html
+      lang={locale}
+      dir={locale === "fa" ? "rtl" : "ltr"}
+      suppressHydrationWarning
+      className={cn("h-full", "antialiased", "font-sans")}
+    >
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider attribute="class" enableSystem defaultTheme={"light"}>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
